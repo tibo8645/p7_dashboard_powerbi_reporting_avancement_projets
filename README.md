@@ -1,10 +1,10 @@
 # 📚 OC - Projet 7 : Tableau de bord de suivi de projets - Power BI
 
-Ce projet est une simulation de mission de consulting chez **Sanitoral**, société internationale spécialisée dans les soins bucco-dentaires. 
-Rattaché au sein du département Project Management Office, il s’agit de concevoir un dashboard permettant le suivi des performances des projets en cours. 
+## 📋 Description du projet 
 
-Contraintes : 
-3 niveaux d'accès à l'information en fonction de son rôle utilisateur (Directeur Général, Directeurs de Région et Directeurs de Pays)
+Cette analyse s'inscrit dans une mission de consulting pour Sanitoral, une société internationale spécialisée dans les soins bucco-dentaires. 
+Rattaché au sein du département Project Management Office (PMO), l'objectif est de concevoir un dashboard Power BI permettant le suivi des performances des projets en cours à travers différentes zones géographiques. 
+Le tableau de bord doit répondre à une contrainte majeure : proposer 3 niveaux d'accès différenciés en fonction du rôle utilisateur (Directeur Général, Directeurs de Région et Directeurs de Pays), avec une attention particulière portée aux projets présentant des dépassements supérieurs à 15% par rapport aux prévisions initiales.
 
 ---
 
@@ -20,56 +20,63 @@ Une attention particulière a été portée pour réaliser un tableau de bord pe
 
 ---
 
+## 💡 Compétences développées
+
+- Power BI : Conception de dashboards interactifs, modélisation de données, relations entre tables
+- Langage DAX : Création de mesures calculées, indicateurs d'écart, logique conditionnelle pour alertes
+- Data modeling : Structuration de modèles en étoile, optimisation des relations
+- Sécurité des données : Implémentation de Row Level Security (RLS) pour accès différenciés
+- UX/UI Design : Product Strategy Canvas, mockups, blueprint, optimisation de l'expérience utilisateur
+
+---
+
+## 📂 Sources de données
+Le projet s'appuie sur un fichier Excel structuré contenant :
+
+Projets : Informations sur les projets (ID, zone géographique, pays, région, type)
+Phases : Détail des phases de chaque projet avec données prévisionnelles et réelles
+Indicateurs : Coûts (budget vs réalisé), Délais (durée prévue vs réelle), Qualité (livrables prévus vs réalisés)
+
+---
+
 ## 🛠️ Technologies et librairies utilisées
 
-- `pandas` pour le traitement des données tabulaires
-- `numpy` pour les opérations numériques
-- `matplotlib`, `seaborn` pour les visualisations
-- `datetime`, `scipy.stats` pour l’analyse temporelle et statistique
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
+[![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat&logo=microsoft-dax&logoColor=white)](https://dax.guide)
+[![Power Query](https://img.shields.io/badge/Power_Query-0099F0?style=flat&logo=powerquery&logoColor=white)](https://powerquery.microsoft.com)
 
 ---
 
-## 🧰 Méthodologie
-3 étapes principales :
+## 🗂️ Méthodologie
+Le projet a été mené en plusieurs étapes clés :
 
-1. **Cadrage du besoin avec le client - Product Strategy Canvas (PSC)**
-   - Users Stories par rôle utilisateur qui spécifie les besoins fonctionnels et techniques du dashboard
-   - Définition des visuels d'avancement des projets, des indicateurs clés et des filtres nécessaires
+1. **Cadrage du besoin client - Product Strategy Canvas (PSC)**
+   - Élaboration de User Stories par rôle utilisateur
+   - Définition des besoins fonctionnels et techniques du dashboard
+   - Spécification des visuels d'avancement, indicateurs clés et filtres nécessaires
 
-2. **Conception d'un dashboard opérationnel Power BI**
-   - Mockups et blueprint du dashboard issues du PSC
-   - Importation, transformation et modélisation des données + relations entre tables
-   - Identification des axes de lecture pour décision métiers et des besoins en terme de filtres opérationnels
-      - Axe de lecture : Synthèse par Zone, Projets, Phases
-      - Axe de lecture par composantes (Coût, Délai, Qualité) : TOP/FLOP pays ou projet ou phase
-   - Liste des besoins en variables,calcul DAX, conception des filtres du dashboard pour traduire l'exigence "Alerte visuelle si projet en dépassement de 15%"
+2. **Conception et modélisation**
+   - Création de mockups et blueprint du dashboard
+   - Importation et transformation des données dans Power BI
+   - Modélisation des relations entre tables
+   - Identification des axes de lecture métiers :
+      - Axe synthèse par Zone, Projets, Phases
+      - Axe analyse par composantes (Coût, Délai, Qualité)
+      - TOP/FLOP pays, projets et phases
 
-3. **Réalisation du dashboard Power BI**
-   - Création des caluls DAX nécessaires pour répondre aux besoins métiers :
-      - Calcul DAX des écarts (cout, délai, qualité) entre les prévisions initiales et les données réelles en quantité et pourcentage
-      - Calcul DAX de l'état (OVERRUN, DRIFT, ON TARGET) de chaque composante (COST, DURATION, DELIVERABLE)
-      - Calcul DAX de l'état global (OVERRUN, DRIFT, ON TARGET) d'une phase ou d'un projet à partir des états de ses 3 composantes
-   - Création des segments, visuels, filtres et interactions pour une vue MODE, PROJET et PHASE
-   - Ajout des drapeaux pays pour une meilleure lisibilité et expérience UX
+3. **Développement DAX et calculs métiers :**
+   - Calcul des écarts (coût, délai, qualité) : quantité et pourcentage
+   - Détermination de l'état par composante (COST, DURATION, DELIVERABLE) : OVERRUN / DRIFT / ON TARGET
+   - Calcul de l'état global d'une phase ou projet (agrégation des 3 composantes)
+   - Création des seuils d'alerte à 15% de dépassement
 
----
+4. **Réalisation du dashboard Power BI**
+   - Création des segments, visuels et filtres interactifs
+   - Développement des 3 vues principales (Globale, Projet, Phase)
+   - Ajout d'une vue Gantt pour le suivi temporel
+   - Intégration de drapeaux pays pour améliorer l'UX
+   - Implémentation de la sécurité RLS pour les 3 niveaux d'accès
 
-## 📊 Résultats clés
-- Vue Globale :
-   - Vue synthétique du portefeuille de projets pour voir en un coup d’œil le nombre de projets et leur état (en dérive, OK, en dépassement) par région.​
-   - Suivi global des coûts, délais et livrables en comparant le réalisé au planifié afin d’identifier rapidement les zones à risque.
-
-- Vue Projet :
-   - Vue détaillée du statut de chaque projet (par pays) avec filtrage par région, type de pays, ID projet et statut, pour repérer rapidement les projets en dérive.
-   - Suivi des coûts, délais et livrables par projet avec indicateurs de variation et TOP5/FLOP5, afin d’identifier les pays/projets les plus performants ou les plus à risque.
-
-- Vue Phase :
-   - Détail des phases de chaque projet avec filtrage par région, type de pays, ID projet, phase et statut, pour un suivi granulaire.
-   - Analyse des coûts, délais et livrables par phase avec indicateurs de variation et TOP5/FLOP5, afin d’identifier les phases les plus critiques.
-
-- Vue Gantt :
-   - Visualisation des pays/projets en dépassement de durée, avec le volume de retard en jours pour cibler les plus critiques.
-   - Gantt détaillé comparant planning prévu et réalisé par phase, avec la variation de durée en jours pour analyser où se situent les dérives dans le temps.
 
 ---
 
