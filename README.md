@@ -14,19 +14,20 @@ L’objectif est :
    - de fournir une vue claire et synthétique des indicateurs clés liés aux projets en cours.
    - d'identifier les projets en dépassement de plus de 15% par rapport aux prévisions initiales en termes de coûts, délais et qualité.
 
-3 vues principales ont été développées : VUE GLOBALE (synthèse par zone géographique), VUE PROJET (détail par projet) et VUE PHASE (détail par phase de projet).
-3 rôles utilisateurs avec des droits d’accès différenciés : Directeur Général, Directeur de Région et Directeur de Pays ont été pris en compte
-Une attention particulière a été portée pour réaliser un tableau de bord permettant de traduire ces objectifs génériques en dashboard orienté métiers.
+- 3 vues principales ont été développées : VUE GLOBALE (synthèse par zone géographique), VUE PROJET (détail par projet) et VUE PHASE (détail par phase de projet).
+- 3 rôles utilisateurs avec des droits d’accès différenciés : Directeur Général, Directeur de Région et Directeur de Pays ont été pris en compte
+
+- Une attention particulière a été portée pour réaliser un tableau de bord permettant de traduire ces objectifs génériques en dashboard orienté métiers.
 
 ---
 
 ## 💡 Compétences développées
 
-- Power BI : Conception de dashboards interactifs, modélisation de données, relations entre tables
-- Langage DAX : Création de mesures calculées, indicateurs d'écart, logique conditionnelle pour alertes
-- Data modeling : Structuration de modèles en étoile, optimisation des relations
-- Sécurité des données : Implémentation de Row Level Security (RLS) pour accès différenciés
-- UX/UI Design : Product Strategy Canvas, mockups, blueprint, optimisation de l'expérience utilisateur
+- **Power BI** : Conception de dashboards interactifs, modélisation de données, relations entre tables
+- **Langage DAX** : Création de mesures calculées, indicateurs d'écart, logique conditionnelle pour alertes
+- **Data modeling** : Structuration de modèles en étoile, optimisation des relations
+- **Sécurité des données** : Implémentation de Row Level Security (RLS) pour accès différenciés
+- **UX/UI Design** : Product Strategy Canvas, mockups, blueprint, optimisation de l'expérience utilisateur
 
 ---
 
