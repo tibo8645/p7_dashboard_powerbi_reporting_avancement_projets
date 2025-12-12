@@ -78,16 +78,6 @@ Le projet a été mené en plusieurs étapes clés :
    - Intégration de drapeaux pays pour améliorer l'UX
    - Implémentation de la sécurité RLS pour les 3 niveaux d'accès
 
----
-
-**Aperçu du dashboard Power BI :**
-https://github.com/tibo8645/p7_dashboard_powerbi_reporting_avancement_projets/blob/main/p7_aper%C3%A7u.pdf
-
-## 📊 Aperçu du Dashboard
-
-**[Voir l'aperçu complet du dashboard (PDF)](https://github.com/tibo8645/p7_dashboard_powerbi_reporting_avancement_projets/blob/main/p7_aper%C3%A7u.pdf)**
-
-[![Aperçu Dashboard](https://img.shields.io/badge/Voir%20Aper%C3%A7u-PDF-red?style=for-the-badge&logo=adobe)](https://github.com/tibo8645/p7_dashboard_powerbi_reporting_avancement_projets/blob/main/p7_aper%C3%A7u.pdf)
 
 ---
 
